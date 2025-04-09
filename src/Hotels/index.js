@@ -1,6 +1,7 @@
 import React from "react";
 import Hotel from "./Hotel.js";
 import { hotels } from "../data.js";
+import Filters from "../Filters"; // use your Filters/index.js
 
 const renderHotel = (hotel) => <Hotel key={hotel.id} hotel={hotel} />;
 
@@ -20,7 +21,13 @@ const HotelsList = (props) => {
         <p className="subtitle">Find the best deals, top-rated stays, and your perfect getaway.</p>
       </header>
 
-      <ul className="hotels-list">{hotelListElements}</ul>
+      {/* 🔽 Filter dropdown here */}
+      <Filters
+        selectedFilters={props.selectedFilters}
+        toggleFilter={props.toggleFilter}
+      />
+
+      <div className="hotels-grid">{hotelListElements}</div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Hotels from "./Hotels";
-import Filters from "./Filters";
+
 
 class App extends Component {
   state = { selectedFilters: [] };
@@ -24,12 +24,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Filters
-          selectedFilters={this.state.selectedFilters}
-          toggleFilter={this.toggleFilter}
-        />
-        <Hotels selectedFilters={this.state.selectedFilters} />
-      </div>
+
+  <Hotels
+    selectedFilters={this.state.selectedFilters}
+    toggleFilter={this.toggleFilter}
+  />
+</div>
+
     );
   }
 }
