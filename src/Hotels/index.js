@@ -23,8 +23,9 @@ const HotelsList = (props) => {
 
       {/* 🔽 Filter dropdown here */}
       <Filters
-        selectedFilters={props.selectedFilters}
-        toggleFilter={props.toggleFilter}
+       selectedFilters={props.selectedFilters}
+       toggleFilter={props.toggleFilter}
+       clearAllFilters={props.clearAllFilters}
       />
 
       <div className="hotels-grid">{hotelListElements}</div>

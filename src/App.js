@@ -21,14 +21,21 @@ class App extends Component {
     }
     this.setState({ selectedFilters: newFilters });
   };
+
+  clearAllFilters = () => {
+    this.setState({ selectedFilters: [] });
+  };
+  
   render() {
     return (
       <div className="App">
 
   <Hotels
-    selectedFilters={this.state.selectedFilters}
-    toggleFilter={this.toggleFilter}
-  />
+  selectedFilters={this.state.selectedFilters}
+  toggleFilter={this.toggleFilter}
+  clearAllFilters={this.clearAllFilters}
+/>
+
 </div>
 
     );
